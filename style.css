@@ -324,7 +324,19 @@ section::before {
     z-index: 10;       /* Asegura que flote limpiamente */
     pointer-events: none; /* Evita que estorbe si alguien intenta hacer clic cerca */
 }
-
+.flor-esquina1 {
+   position: absolute;
+    
+    /* 📍 COORDENADAS PARA UBICARLO ABAJO A LA DERECHA */
+    bottom: 15px !important;  /* Distancia desde el borde de abajo */
+   left: 0px !important;  /* ¡ESTO FALTA! Lo pega a la esquina derecha */
+    
+    /* 🛠️ TAMANÓ CONTROLADO */
+    width: 100px !important;  
+    height: auto !important; 
+    z-index: 10;
+    
+}
 .flor-esquina {
     position: absolute;
     width: 220px;
