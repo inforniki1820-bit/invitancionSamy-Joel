@@ -318,7 +318,7 @@ section::before {
     right: 20px;       /* Lo pega a la derecha */
     
     /* 👇 AQUÍ CONTROLAS EL TAMAÑO (Estaba en 55px o más, bajarlo a 35px o 40px lo hace ideal) */
-    width: 80px !important; 
+    width: 50px !important; 
     height: auto;
     
     z-index: 10;       /* Asegura que flote limpiamente */
@@ -332,7 +332,7 @@ section::before {
    left: -5px !important;  /* ¡ESTO FALTA! Lo pega a la esquina derecha */
     
     /* 🛠️ TAMANÓ CONTROLADO */
-    width: 90px !important;  
+    width: 50px !important;  
     height: auto !important; 
     z-index: 10;
     
