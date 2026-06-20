@@ -35,6 +35,26 @@ section {
 }
 
 /* DECORACIÓN DE TÍTULOS: Enmarcado con línea base clásica */
+.titulo-dorado1 {
+    font-family: 'Cinzel', serif;
+    color: #801515; /* Guinda elegante */
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.titulo-dorado1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #801515, transparent);
+}
 .titulo-dorado {
     font-family: 'Cinzel', serif;
     color: #801515; /* Guinda elegante */
