@@ -328,8 +328,8 @@ section::before {
    position: absolute;
     
     /* 📍 COORDENADAS PARA UBICARLO ABAJO A LA DERECHA */
-    bottom: 5px !important;  /* Distancia desde el borde de abajo */
-   left: 0px !important;  /* ¡ESTO FALTA! Lo pega a la esquina derecha */
+    bottom: 3px !important;  /* Distancia desde el borde de abajo */
+   left: -5px !important;  /* ¡ESTO FALTA! Lo pega a la esquina derecha */
     
     /* 🛠️ TAMANÓ CONTROLADO */
     width: 100px !important;  
