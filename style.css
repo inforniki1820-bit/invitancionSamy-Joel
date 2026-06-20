@@ -1,0 +1,733 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y CONFIGURACIÓN BASE (RENOVADO FLORAL)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b; /* Fondo oscuro de pantalla externa */
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.invitacion-contenedor {
+    width: 100%;
+    max-width: 480px; 
+    margin: 0 auto;   
+    position: relative;
+    background-color: #fbf9f5; /* Fondo crema global unificado */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3); 
+    overflow: hidden;
+}
+
+section {
+    padding: 60px 25px; /* Ligeramente más amplio para dar aire al diseño */
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+/* DECORACIÓN DE TÍTULOS: Enmarcado con línea base clásica */
+.titulo-dorado {
+    font-family: 'Cinzel', serif;
+    color: #801515; /* Guinda elegante */
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.titulo-dorado::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #801515, transparent);
+}
+
+/* SEPARADORES ENTRE SECCIONES (ROMBO ELEGANTE) */
+section::before {
+    content: "♦";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #7e5b3e;
+    font-size: 10px;
+    opacity: 0.4;
+    letter-spacing: 10px;
+}
+
+.seccion-portada::before {
+    display: none; /* La portada no lleva separador arriba */
+}
+
+/* ==========================================================================
+   SECCIÓN 1: PORTADA PROFESIONAL Y RESPONSIVA (REPARADA)
+   ========================================================================== */
+.seccion-portada {
+    padding: 0;
+    width: 100%;
+    background-color: #fbf9f5;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.portada-foto-wrapper {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.foto-principal-portada {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.degradado-difuminado {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to top, #fbf9f5 0%, rgba(251, 249, 245, 0.8) 40%, transparent 100%);
+    z-index: 2;
+}
+
+.reproductor-flotante {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.btn-dale-play {
+    background-color: #7e5b3e;
+    border: none;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: pulsoMusica 2s infinite; 
+}
+
+.btn-dale-play i {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.btn-dale-play span {
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+@keyframes pulsoMusica {
+    0% { transform: scale(1); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    50% { transform: scale(1.05); box-shadow: 0 4px 15px rgba(126, 91, 62, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+}
+
+.bloque-textos-portada {
+    width: 100%;
+    padding: 35px 20px;
+    background-color: #fbf9f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+
+.nombres-portada {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;
+    color: #801515;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.subtitulo-casamos {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: #7e5b3e;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.flecha-deslizar {
+    font-size: 16px;
+    color: #7e5b3e;
+    margin-top: 10px;
+    animation: bounce 2s infinite;
+}
+
+/* IMAGEN DE LOS AROS EN PORTADA */
+.contenedor-aros-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px 0 14px 0;
+}
+
+.aros-foto {
+    width: 55px;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   SECCIÓN 2: NUESTRA HISTORIA 
+   ========================================================================== */
+.seccion-historia {
+    background-color: #fbf9f5;
+}
+
+.carrusel-simulado {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 4px; /* Un corte más recto y limpio evoca mayor formalidad */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(126, 91, 62, 0.15); 
+    margin: 25px 0;
+    border: 1px solid #eadecc;
+}
+
+.foto-carrusel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.foto-carrusel.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carrusel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 15px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.carrusel-nav i {
+    font-size: 14px;
+    color: #ffffff;
+    background: rgba(126, 91, 62, 0.85); 
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: transform 0.1s;
+}
+
+.carrusel-nav i:active {
+    transform: scale(0.9);
+}
+
+.frase-romantica {
+    font-style: italic; 
+    font-size: 14px; 
+    color: #801515; 
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.texto-historia {
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 0 10px;
+    color: #555555;
+}
+
+/* ==========================================================================
+   SECCIÓN 3: CORTE DE HONOR (PAPELERÍA REFINADA)
+   ========================================================================== */
+.seccion-corte {
+    background-color: #fbf9f5;
+    padding: 40px 20px;
+}
+
+.tarjeta-padres {
+    background-color: #7e5b3e; 
+    position: relative;
+    padding: 50px 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* DOBLE BORDE INTERNO */
+    outline: 1px solid rgba(251, 249, 245, 0.3);
+    outline-offset: -8px;
+}
+
+.flor-esquina {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    z-index: 2;
+}
+
+.flor-top {
+    top: -20px;    
+    right: -15px;   
+    width: 130px;
+}
+
+.flor-bottom {
+    bottom: -10px;
+    left: -20px;
+    width: 210px;
+}
+
+.contenido-padres {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+.flor-esquinaba, .flor-esquinajo {
+    position: absolute;
+    height: auto;
+    z-index: 2;
+    pointer-events: none; /* Evita que estorbe al hacer clic */
+}
+
+/* 2. FLOR DE ARRIBA A LA DERECHA (La que se ve en la imagen) */
+.flor-esquinajo {
+    top: -20px;    
+    left: -25px;   
+    width: 150px; /* <--- Este tamaño de 130px evitará que tape el texto */
+}
+
+/* 3. FLOR DE ABAJO A LA IZQUIERDA */
+.flor-esquinaba {
+    bottom: -40px;
+    right: -15px;
+    width: 150px; /* Puedes ajustar este tamaño si quieres que sea más grande o chica */
+}
+
+.titulo-tarjeta {
+    font-family: 'Cinzel', serif;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.space-top {
+    margin-top: 35px;
+}
+
+.nombre-persona {
+    font-family: 'Montserrat', sans-serif;
+    color: #fbf9f5; 
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   SECCIÓN 4: INVITACIÓN Y TEMPORIZADOR
+   ========================================================================== */
+.seccion-fecha {
+    background-color: #fbf9f5;
+}
+
+.texto-introduccion {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #555555;
+    
+    /* CAMBIOS AQUÍ: Quitamos el 'left' que lo movía mal */
+    position: relative; 
+    z-index: 3; /* Lo pone por encima de cualquier fondo */
+    
+    /* Le damos aire a los lados para que la flor de la esquina no lo pise */
+    padding: 0 50px; 
+    text-align: center;
+    line-height: 1.6;
+}
+
+.fecha-recuadro {
+    border: 1px solid #7e5b3e;
+    outline: 1px solid #7e5b3e;
+    outline-offset: -5px;
+    padding: 30px 15px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+}
+
+.fecha-recuadro h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    color: #801515; 
+    margin: 12px 0;
+    letter-spacing: 1px;
+}
+
+.contador-flex {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.bloque-tiempo {
+    background: #ffffff;
+    border: 1px solid #eadecc;
+    padding: 12px 8px;
+    border-radius: 4px;
+    min-width: 68px;
+    box-shadow: 0 4px 10px rgba(126, 91, 62, 0.05);
+}
+
+.bloque-tiempo span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #801515; 
+    display: block;
+}
+
+.bloque-tiempo label {
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #7e5b3e;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   SECCIÓN 5: UBICACIONES (EFECTO INTERIOR PASPARTÚ)
+   ========================================================================== */
+.seccion-eventos {
+    background-color: #fbf9f5; 
+    color: #4a4a4a;
+}
+
+.tarjeta-evento {
+    background-color: #ffffff;
+    /* BORDE ESTILO PREMIUM: Un borde doble muy fino */
+    border: 3px double #7e5b3e; /* Tu color marrón de la paleta */
+    border-radius: 8px; /* Redondeado suave y sofisticado */
+    
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    
+    /* SOMBRA SUAVE: Para que la tarjeta flote con elegancia */
+    box-shadow: 0 4px 15px rgba(126, 91, 62, 0.08); 
+    position: relative;
+}
+
+.tarjeta-evento i {
+    font-size: 26px;
+    color: #7e5b3e; 
+    margin-bottom: 15px;
+}
+
+.tarjeta-evento h3 {
+    font-family: 'Cinzel', serif;
+    color: #801515; 
+    font-size: 18px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.tarjeta-evento p {
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.tarjeta-evento::before {
+    content: '♥';
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 30px;
+    color: rgba(128, 21, 21, 0.4); /* Tu color vino con transparencia */
+}
+
+/* Corazón en la esquina superior derecha */
+.tarjeta-evento::after {
+    content: '♥';
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 11px;
+    color: rgba(128, 21, 21, 0.4);
+}
+
+.btn-mapa {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #801515 0%, #801515 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #eadecc;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(126, 91, 62, 0.2);
+}
+
+.btn-mapa:hover {
+    background: linear-gradient(135deg, #801515 0%, #5e0f0f 100%);
+    border-color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   SECCIÓN 6: ITINERARIO 
+   ========================================================================== */
+.subtexto-itinerario {
+    font-size: 12px; 
+    color: #7e5b3e;
+    margin-bottom: 10px;
+}
+
+.linea-itinerario {
+    position: relative;
+    margin: 40px auto 0 auto;
+    padding-left: 35px;
+    text-align: left;
+    max-width: 320px;
+}
+
+.linea-itinerario::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, #7e5b3e, #eadecc, transparent);
+}
+
+.hito {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hito::before {
+    content: '\f004'; 
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: -31px;
+    top: 3px;
+    background: #fbf9f5;
+    color: #801515;
+    font-size: 11px;
+    padding: 2px 0;
+}
+
+.hito h5 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #7e5b3e;
+    margin-bottom: 4px;
+}
+
+.hito p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   SECCIÓN 7: CIERRE
+   ========================================================================== */
+.seccion-cierre {
+    background-color: #fbf9f5;
+    padding-bottom: 80px; /* Espacio extra al final */
+}
+
+.seccion-cierre h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: #801515; 
+}
+
+.frase-cierre {
+    font-size: 16px; 
+    margin-top: 10px; 
+    padding: 0 20px;
+    color: #555555;
+    font-style: italic;
+}
+
+.adorno-final {
+    width: 480px;          /* Se expande a todo el ancho disponible */
+  left: -25px;;     /* ¡CLAVE! Cambiado a 480px para igualar exactamente a tu contenedor */
+bottom: -80px;
+    height: auto;         /* Mantiene la proporción perfecta del dibujo */
+    display: block;       /* Elimina el espacio fantasma que traen las imágenes por defecto */
+    
+    position: relative;
+}
+
+/* ==========================================================================
+   ANIMACIONES Y CORAZONES LATERALES
+   ========================================================================== */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-5px); }
+    60% { transform: translateY(-3px); }
+}
+
+.particulas-borde {
+    position: fixed; 
+    top: 0;
+    width: 60px; 
+    height: 100vh; 
+    z-index: 99;   
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.particulas-borde.izquierdo {
+    left: calc(50% - 240px);
+    background: linear-gradient(to right, rgba(255,255,255,0.03), transparent);
+}
+
+.particulas-borde.derecho {
+    right: calc(50% - 240px);
+    background: linear-gradient(to left, rgba(255,255,255,0.03), transparent);
+}
+
+@media (max-width: 480px) {
+    .particulas-borde.izquierdo { left: 0; }
+    .particulas-borde.derecho { right: 0; }
+}
+
+.particulas-borde::before {
+    content: '♥\a\a    ♥\a♥\a      ♥\a  ♥\a\a    ♥\a  ♥\a      ♥';
+    white-space: pre;
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    bottom: -100%; 
+    font-size: 14px;
+    color: rgba(152, 18, 18, 0.6);
+    text-shadow: 0 0 5px rgba(255, 192, 203, 0.5);
+    line-height: 50px;
+    animation: burbujasSubiendo 5s ease-in-out infinite;
+}
+
+.particulas-borde::after {
+    content: '  ♥\a\a  ♥\a    ♥\a\a  ♥\a      ♥\a\a  ♥\a    ♥';
+    white-space: pre;
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    top: -100%; 
+    font-size: 10px; 
+    color: rgba(176, 7, 7, 0.4);
+    line-height: 50px;
+    animation: burbujasBajando 10s ease-in-out infinite;
+    animation-delay: 3.5s;
+}
+
+@keyframes burbujasSubiendo {
+    0% { transform: translateY(0) translateX(0) scale(0.9); opacity: 0; }
+    10% { opacity: 1; transform: translateY(-10vh) translateX(-8px) scale(1); }
+    30% { transform: translateY(-30vh) translateX(10px) scale(1.1); }
+    50% { transform: translateY(-50vh) translateX(-12px) scale(1); }
+    70% { transform: translateY(-70vh) translateX(8px) scale(1.05); }
+    90% { opacity: 1; }
+    100% { transform: translateY(-120vh) translateX(0) scale(0.9); opacity: 0; }
+}
+
+@keyframes burbujasBajando {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    15% { opacity: 0.8; transform: translateY(15vh) translateX(12px); }
+    45% { transform: translateY(45vh) translateX(-10px); }
+    75% { transform: translateY(75vh) translateX(6px); }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(120vh) translateX(0); opacity: 0; }
+}
+
+/* SEPARADORES ENTRE SECCIONES (ROMBO ELEGANTE) */
+section::before {
+    content: "♦";
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+/* SEPARADORES ENTRE SECCIONES (DETALLE FLORAL FINO) */
+section::before {
+    content: "\f4d8"; /* Código de Font Awesome para una rama con hojas elegantes */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #7e5b3e; /* Tu marrón elegante, o puedes cambiarlo a #801515 si prefieres el color vino */
+    font-size: 14px;
+    opacity: 0.35; /* Se mantiene sutil para que no compita con el texto */
+}
+/* 1. Definimos la animación de balanceo suave */
+@keyframes balanceoFloral {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(6deg); } /* Un giro casi invisible y elegante */
+    100% { transform: rotate(0deg); }
+}
+
+/* 2. Se la aplicamos a tus imágenes decorativas */
+.flor-esquinajo, .flor-esquinaba {
+    animation: balanceoFloral 6s ease-in-out infinite; /* Se balancea suavemente todo el tiempo */
+}
+
+/* Para las flores del final, podemos hacer que aparezcan desde abajo al cargar */
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.adorno-final {
+    animation: aparecerDesdeAbajo 1.5s ease-out forwards;
+}

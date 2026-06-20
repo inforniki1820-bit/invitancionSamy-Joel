@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Joel & Samy</title>
+    
+    <!-- FUENTES ELEGANTES DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- ENLACE PARA ICONOS (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- HOJA DE ESTILOS EXTERNA -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CONTENEDOR MÓVIL CENTRAL (ÚNICO) -->
+    <div class="invitacion-contenedor">
+        <div class="particulas-borde izquierdo"></div>
+        <div class="particulas-borde derecho"></div>
+
+        <!-- 1. PORTADA REPARADA (ANTI-INVASIÓN Y CON DEGRADADO) -->
+        <section class="seccion-portada">
+            
+            <!-- Botón flotante de música estilo "DALE PLAY" -->
+            <div class="reproductor-flotante">
+                <button class="btn-dale-play" id="btn-musica">
+                    <i class="fa-solid fa-music" id="icono-musica"></i>
+                    <span id="texto-musica">DALE PLAY</span>
+                </button>
+            </div>
+            <audio id="musica-boda" src="./imagen/bo2_01.mp3" loop></audio>
+
+            <!-- Contenedor de la foto principal con su degradado blanco/crema integrado -->
+            <div class="portada-foto-wrapper">  
+                <img src="./imagen/pmano1.png" class="foto-principal-portada" alt="Samy y Joel">
+                <div class="degradado-difuminado"></div>
+            </div>
+    <p class="frase-cierre"> "Uno solo puede ser vencido, pero dos pueden resistir. ¡La cuerda de tres hilos no se rompe fácilmente!" Eclesiastés 4:12</p>
+            <!-- Bloque de textos en flujo natural (Nunca invadirá la foto) -->
+            <div class="bloque-textos-portada">
+                <h1 class="nombres-portada">Samy & Joel</h1>
+                <h2 class="subtitulo-casamos">¡NOS CASAMOS!</h2>
+                <div class="contenedor-aros-img">
+        <img src="imagen/aronsi.png" alt="" class="aros-foto">
+    </div>
+                <div class="flecha-deslizar">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. NUESTRA HISTORIA -->
+        <section class="seccion-historia">
+            <img src="./imagen/fo6.png" class="flor-esquinaba" alt="">
+                <img src="./imagen/fo5.png" class="flor-esquinajo" alt="">
+            <h3 class="titulo-dorado">Nuestra Historia</h3>
+            <p class="frase-romantica">"Un viaje que comenzó con un sí, y hoy se vuelve eterno..."</p>
+            <p class="texto-historia">Cada momento a tu lado ha sido una aventura, y no podemos esperar para comenzar este nuevo capítulo juntos rodeados de las personas que más amamos.</p>
+        
+            <div class="carrusel-simulado">
+                <img src="./imagen/foper.jpg" class="foto-carrusel active" alt="Foto 1">
+                <img src="./imagen/fo9.jpg" class="foto-carrusel" alt="Foto 2">
+                <img src="./imagen/fo1.JPG" class="foto-carrusel" alt="Foto 3">
+                <img src="./imagen/fo3.jpg" class="foto-carrusel" alt="Foto 4">
+
+                <div class="carrusel-nav">
+                    <i class="fa-solid fa-chevron-left" id="btn-atras"></i>
+                    <i class="fa-solid fa-chevron-right" id="btn-siguiente"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CORTE DE HONOR -->
+        <section class="seccion-corte">
+            <h3 class="titulo-dorado">EN COMPAÑIA DE:</h3>
+            <div class="tarjeta-padres">
+                <img src="./imagen/sellito.png" class="flor-esquina flor-top" alt="">
+                <img src="./imagen/b2.png" class="flor-esquina flor-bottom" alt="">
+
+                <div class="contenido-padres">
+                    <h3 class="titulo-tarjeta">PADRES DE LA NOVIA</h3>
+                    <p class="nombre-persona">Rita Ricardina Unoc Sanchez</p>
+                    <p class="nombre-persona">Zenobio Anguiz Silguera</p>
+                    
+                    <h3 class="titulo-tarjeta space-top">PADRES DEL NOVIO</h3>
+                    <p class="nombre-persona">Justo Pastor Balbin Muñico</p>
+                    <p class="nombre-persona">Flor de Maria Cardenas Samaniego</p>
+
+                    <h3 class="titulo-tarjeta space-top">PADRINOS</h3>
+                    <p class="nombre-persona">Vicente Cerron Tacza</p>
+                    <p class="nombre-persona">Lucila Martinez Ninalaya</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. INVITACIÓN Y TEMPORIZADOR -->
+        <section class="seccion-fecha">
+             <img src="./imagen/fo6.png" class="flor-esquinaba" alt="">
+                <img src="./imagen/fo5.png" class="flor-esquinajo" alt="">
+            <p class="texto-introduccion">Tenemos el honor de invitarte a nuestra boda el próximo</p>
+            
+            <div class="fecha-recuadro">
+                <p style="letter-spacing: 3px;">SÁBADO</p>
+                <h3>12 DE SETIEMBRE</h3>
+                <p style="letter-spacing: 3px;">AÑO 2026</p>
+            </div>
+
+            <!-- CUENTA REGRESIVA -->
+            <div class="contador">
+                <h4 style="font-size: 13px; letter-spacing: 1px;">El gran dia empieza en: </h4>
+                <div class="contador-flex">
+                    <div class="bloque-tiempo"><span id="dias">00</span><label>Días</label></div>
+                    <div class="bloque-tiempo"><span id="horas">00</span><label>Horas</label></div>
+                    <div class="bloque-tiempo"><span id="minutos">00</span><label>Min</label></div>
+                    <div class="bloque-tiempo"><span id="segundos">00</span><label>Seg</label></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. UBICACIONES -->
+        <section class="seccion-eventos">
+            <h3 class="titulo-dorado">Ubicaciones del Gran Día</h3>
+
+            <div class="tarjeta-evento">
+                <i class="fa-solid fa-file-signature"></i>
+                <h3>Ceremonia Civil</h3>
+                <p><strong>Hora:</strong> 9:00 A.M</p>
+                <p>Salón de Recepciones "El Dorado</p>
+                <p>Barrio Yauyo - Chupaca</p>
+                <a href="https://maps.app.goo.gl/2dZYXUDxbc58bVra6" class="btn-mapa" target="_blank"><i class="fa-solid fa-location-dot"></i> Cómo Llegar</a>
+            </div>
+
+            <div class="tarjeta-evento">
+                <i class="fa-solid fa-church"></i>
+                <h3>Ceremonia Religiosa</h3>
+                <p><strong>Hora:</strong> 11:00 A.M</p>
+                <p>Iglesia Matriz de Chupaca</p>
+                <p>Parque Chupaca</p>
+                <a href="https://maps.app.goo.gl/HUpWsApr3V5uZ7Vk9" class="btn-mapa" target="_blank"><i class="fa-solid fa-location-dot"></i> Cómo Llegar</a>
+            </div>
+
+            <div class="tarjeta-evento">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h3>Recepción y Fiesta</h3>
+                <p><strong>Hora:</strong> 1:00 PM</p>
+                <p>Salón de Recepciones "El Dorado"</p>
+                <p>Barrio Yauyo - Chupaca</p>
+                <a href="https://maps.app.goo.gl/2dZYXUDxbc58bVra6" class="btn-mapa" target="_blank"><i class="fa-solid fa-location-dot"></i> Cómo Llegar</a>
+            </div>
+        </section>
+
+        <!-- 6. ITINERARIO -->
+        <section class="seccion-itinerario">
+            <img src="./imagen/flo1.png" class="flor-esquinaba" alt="">
+                <img src="./imagen/fo5.png" class="flor-esquinajo" alt="">
+            <h3 class="titulo-dorado">Programa</h3>
+            <p class="subtexto-itinerario">Para que no te pierdas ningún momento especial</p>
+
+            <div class="linea-itinerario">
+                <div class="hito">
+                    <h5>9:00 AM</h5>
+                    <p>Matrimonio Civil en el Local "El Dorado"</p>
+                </div>
+                <div class="hito">
+                    <h5>11:00 AM</h5>
+                    <p>Matrimonio en la iglesia Matriz de Chupaca</p>
+                </div>
+                <div class="hito">
+                    <h5>1:00  PM</h5>
+                    <p>Ceremonia</p>
+                </div>
+                <div class="hito">
+                    <h5>2:00 PM</h5>
+                    <p>Almuerzo</p>
+                </div>
+                <div class="hito">
+                    <h5>3:30 PM</h5>
+                    <p>Gran Apertura de Pista de Baile</p>
+                </div>
+                <div class="hito">
+                    <h5>9:00 PM</h5>
+                    <p>Gran Apertura de Pista de Baile</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CIERRE -->
+        <section class="seccion-cierre">
+            <h2>¡Te Esperamos!</h2>
+            <p class="frase-cierre">Tu presencia hará de nuestro día un recuerdo inolvidable.</p>
+            <img src="./imagen/fo7.png" class="adorno-final" alt="Detalle hojas doradas abajo">
+        </section>
+
+    </div>
+
+    <!-- LOGICA JAVASCRIPT REORDENADA -->
+    <script>
+        const imagenes = document.querySelectorAll('.foto-carrusel');
+        const btnAtras = document.getElementById('btn-atras');
+        const btnSiguiente = document.getElementById('btn-siguiente');
+        let posicion = 0;
+
+        function mostrarImagen(nuevaPosicion) {
+            imagenes[posicion].classList.remove('active');
+            posicion = (nuevaPosicion + imagenes.length) % imagenes.length;
+            imagenes[posicion].classList.add('active');
+        }
+
+        btnSiguiente.addEventListener('click', () => { mostrarImagen(posicion + 1); });
+        btnAtras.addEventListener('click', () => { mostrarImagen(posicion - 1); });
+
+        // CONTROL DE LA MÚSICA
+        const btnMusica = document.getElementById('btn-musica');
+        const musicaBoda = document.getElementById('musica-boda');
+        const iconoMusica = document.getElementById('icono-musica');
+        const textoMusica = document.getElementById('texto-musica');
+
+        btnMusica.addEventListener('click', () => {
+            if (musicaBoda.paused) {
+                musicaBoda.play();
+                textoMusica.innerText = "PAUSA";
+                iconoMusica.className = "fa-solid fa-pause";
+            } else {
+                musicaBoda.pause();
+                textoMusica.innerText = "DALE PLAY";
+                iconoMusica.className = "fa-solid fa-music";
+            }
+        });
+
+        // CUENTA REGRESIVA
+        const fechaBoda = new Date(2026, 8, 12, 9, 0, 0).getTime();
+        const intervaloContador = setInterval(function() {
+            const ahora = new Date().getTime();
+            const distancia = fechaBoda - ahora;
+
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            document.getElementById("dias").innerText = String(dias).padStart(2, '0');
+            document.getElementById("horas").innerText = String(horas).padStart(2, '0');
+            document.getElementById("minutos").innerText = String(minutos).padStart(2, '0');
+            document.getElementById("segundos").innerText = String(segundos).padStart(2, '0');
+
+            if (distancia < 0) {
+                clearInterval(intervaloContador);
+                document.querySelector(".contador").innerHTML = "<h4>¡LLEGÓ EL GRAN DÍA! 🎉</h4>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
