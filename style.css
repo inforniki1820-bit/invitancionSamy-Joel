@@ -332,7 +332,7 @@ section::before {
    left: -5px !important;  /* ¡ESTO FALTA! Lo pega a la esquina derecha */
     
     /* 🛠️ TAMANÓ CONTROLADO */
-    width: 100px !important;  
+    width: 130px !important;  
     height: auto !important; 
     z-index: 10;
     
