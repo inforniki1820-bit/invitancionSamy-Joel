@@ -314,8 +314,8 @@ section::before {
 }
 .flor-sellito {
    position: absolute;
-    top: 10px;         /* Lo acerca más al borde superior de la tarjeta */
-    right: 15px;       /* Lo pega a la derecha */
+    top: 30px;         /* Lo acerca más al borde superior de la tarjeta */
+    right: 30px;       /* Lo pega a la derecha */
     
     /* 👇 AQUÍ CONTROLAS EL TAMAÑO (Estaba en 55px o más, bajarlo a 35px o 40px lo hace ideal) */
     width: 38px !important; 
