@@ -44,6 +44,8 @@ section {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    padding: 20 0;
+   margin-top: 65px !important;
 }
 
 .titulo-dorado1::after {
